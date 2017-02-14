@@ -1,0 +1,59 @@
+{
+  "name": "next-cs-forms",
+  "description": "Forms for CS based on next",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "engines": {
+    "node": ">=7.5.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
+    "test-offline": "standard && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/**/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install",
+    "standard-fix": "standard --fix",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "now-deploy": "npm test && now alias"
+  },
+  "keywords": [
+    "dashboard",
+    "next",
+    "status",
+    "rambo",
+    "Telemark fylkeskommune"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telemark/next-cs-forms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/next-cs-forms/issues"
+  },
+  "now": {
+    "alias": [
+      "forms.cs.next.t-fk.win"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "devDependencies": {
+    "coveralls": "2.11.16",
+    "nsp": "2.6.2",
+    "standard": "8.6.0",
+    "tap": "10.1.0"
+  },
+  "dependencies": {
+    "muicss": "0.9.9-rc2",
+    "next": "1.2.3"
+  }
+}
