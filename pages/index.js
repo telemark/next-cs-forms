@@ -29,7 +29,7 @@ export default class Index extends React.Component {
       if (typeof window !== 'undefined') {
         window.location = url
       } else {
-        ctx.res.writeHead(301,
+        ctx.res.writeHead(302,
           {Location: url}
         )
         ctx.res.end()
