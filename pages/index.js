@@ -9,17 +9,35 @@ import Button from 'muicss/lib/react/button'
 import Checkbox from 'muicss/lib/react/checkbox'
 import Radio from 'muicss/lib/react/radio'
 import Head from '../components/head'
+const config = require('../config')
+const getSession = require('../lib/get-session')
 
 export default class Index extends React.Component {
 
   constructor (props) {
     super(props)
-    this.state = {
-      mobil: 'Samsung A5',
-      leder: 'Leder Ledersen'
-    }
+    this.state = Object.assign(this.props.session, {mobil: 'Samsung A5'})
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  static async getInitialProps (ctx) {
+    const jwt = ctx.query.jwt
+    if (!jwt) {
+      console.log('jwt missing')
+      const url = `${config.SSO_URL}?origin=${config.ORIGIN_URL}`
+      if (typeof window !== 'undefined') {
+        window.location = url
+      } else {
+        ctx.res.writeHead(301,
+          {Location: url}
+        )
+        ctx.res.end()
+      }
+    } else {
+      const data = await getSession(jwt)
+      return {session: data}
+    }
   }
 
   handleChange (event) {
@@ -44,6 +62,7 @@ export default class Index extends React.Component {
         <Container fluid>
           <h1 className='mui--text-title'>Bestill mobiltelefon</h1>
           <Form onSubmit={this.handleSubmit}>
+            <Input name='leder' label='Bestillers navn' floatingLabel defaultValue={this.state.bestiller} onChange={this.handleChange} />
             <legend>Mobiltelefon</legend>
             <Radio name='mobil' value='Samsung A5' label='Samsung A5' defaultChecked onChange={this.handleChange} />
             <Radio name='mobil' value='Samsung S7' label='Samsung S7' onChange={this.handleChange} />
