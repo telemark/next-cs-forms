@@ -42,3 +42,9 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Next.js
+.next
+
+# Yarn
+yarn.lock
