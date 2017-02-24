@@ -11,6 +11,7 @@ import Radio from 'muicss/lib/react/radio'
 import Head from '../components/head'
 const config = require('../config')
 const getSession = require('../lib/get-session')
+const postForm = require('../lib/post-form')
 
 export default class Index extends React.Component {
 
@@ -50,9 +51,12 @@ export default class Index extends React.Component {
     })
   }
 
-  handleSubmit (event) {
+  async handleSubmit (event) {
     event.preventDefault()
     console.log(this.state)
+    const formData = Object.assign({}, this.state)
+    const res = await postForm('CS', formData)
+    console.log(res)
   }
 
   render () {
