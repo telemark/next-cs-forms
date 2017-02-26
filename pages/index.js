@@ -66,7 +66,7 @@ export default class Index extends React.Component {
         <Container fluid>
           <h1 className='mui--text-title'>Bestill mobiltelefon</h1>
           <Form onSubmit={this.handleSubmit}>
-            <Input name='bestiller' label='Bestillers navn' floatingLabel defaultValue={this.state.bestiller} onChange={this.handleChange} required/>
+            <Input name='bestiller' label='Bestillers navn' floatingLabel defaultValue={this.state.bestiller} onChange={this.handleChange} required />
             <legend>Mobiltelefon</legend>
             <Radio name='mobil' value='Samsung A5' label='Samsung A5' defaultChecked onChange={this.handleChange} />
             <Radio name='mobil' value='Samsung S7' label='Samsung S7' onChange={this.handleChange} />
@@ -81,7 +81,7 @@ export default class Index extends React.Component {
             <Checkbox name='ekstrautstyr6' value='Ekstra lader 110v-240v iPhone 5, 6, 6s, 6s Plus og iPhone SE' label='Ekstra lader 110v-240v iPhone 5, 6, 6s, 6s Plus og iPhone SE' onChange={this.handleChange} />
             <Textarea name='begrunnelse' label='Begrunnelse' floatingLabel onChange={this.handleChange} />
             <Checkbox name='godkjent' value='ja' label='Godkjent av leder' onChange={this.handleChange} required />
-            <Input name='leder' label='Leders navn' floatingLabel defaultValue={this.state.leder} onChange={this.handleChange} required/>
+            <Input name='leder' label='Leders navn' floatingLabel defaultValue={this.state.leder} onChange={this.handleChange} required />
             <Button variant='raised'>Send bestilling</Button>
           </Form>
         </Container>
