@@ -9,7 +9,7 @@ module.exports = {
   SERVICES: [
     {
       name: 'CS',
-      url: process.env.CS_URL || 'https://cs.services.t-fk.no',
+      url: process.env.CS_URL || 'https://cs-service.t-fk.no',
       path: process.env.CS_PATH || '/createTicket'
     }
   ]
