@@ -25,7 +25,6 @@ export default class Index extends React.Component {
   static async getInitialProps (ctx) {
     const jwt = ctx.query.jwt
     if (!jwt) {
-      console.log('jwt missing')
       const url = `${config.SSO_URL}?origin=${config.ORIGIN_URL}`
       if (typeof window !== 'undefined') {
         window.location = url
