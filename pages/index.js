@@ -49,12 +49,17 @@ export default class Index extends React.Component {
     })
   }
 
-  async handleSubmit (event) {
+  handleSubmit (event) {
     event.preventDefault()
-    console.log(this.state)
     const formData = Object.assign({}, this.state)
-    const res = await postForm(formData)
-    console.log(res)
+    postForm(formData)
+      .then(response => {
+        const url = `/mottatt?ticket=${response.data.id}`
+        window.location = url
+      }).catch(error => {
+      const url = `/feil?error=${error}`
+      window.location = url
+    })
   }
 
   render () {
