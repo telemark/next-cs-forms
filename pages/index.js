@@ -54,7 +54,7 @@ export default class Index extends React.Component {
     const formData = Object.assign({}, this.state)
     postForm(formData)
       .then(response => {
-        const url = `/mottatt?ticket=${response.data.id}`
+        const url = `/mottatt?ticket=${response.id}`
         window.location = url
       }).catch(error => {
         const url = `/feil?error=${error}`
