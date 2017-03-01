@@ -57,9 +57,9 @@ export default class Index extends React.Component {
         const url = `/mottatt?ticket=${response.data.id}`
         window.location = url
       }).catch(error => {
-      const url = `/feil?error=${error}`
-      window.location = url
-    })
+        const url = `/feil?error=${error}`
+        window.location = url
+      })
   }
 
   render () {
