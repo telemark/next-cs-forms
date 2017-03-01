@@ -13,7 +13,7 @@ export default () => (
       <link rel='icon' sizes='192x192' href='static/images/icons/chrome-touch-icon-192x192.png' />
       <link rel='apple-touch-icon' href='static/images/icons/apple-touch-icon-precomposed.png' />
       <link rel='shortcut icon' href='static/images/icons/favicon.ico' />
-      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+      <script src='https://cdn.polyfill.io/v2/polyfill.min.js' />
     </Head>
   </div>
 )
