@@ -14,7 +14,6 @@ const getSession = require('../lib/get-session')
 const postForm = require('../lib/post-form')
 
 export default class Index extends React.Component {
-
   constructor (props) {
     super(props)
     this.state = Object.assign(this.props.session, {mobil: 'Samsung A5'})
@@ -54,7 +53,7 @@ export default class Index extends React.Component {
     event.preventDefault()
     console.log(this.state)
     const formData = Object.assign({}, this.state)
-    const res = await postForm('CS', formData)
+    const res = await postForm(formData)
     console.log(res)
   }
 
