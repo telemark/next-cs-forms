@@ -16,7 +16,7 @@ const postForm = require('../lib/post-form')
 export default class Index extends React.Component {
   constructor (props) {
     super(props)
-    this.state = Object.assign(this.props.session, {mobil: 'Samsung A5'})
+    this.state = Object.assign(this.props.session, { mobil: 'Samsung A5' })
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -29,13 +29,13 @@ export default class Index extends React.Component {
         window.location = url
       } else {
         ctx.res.writeHead(302,
-          {Location: url}
+          { Location: url }
         )
         ctx.res.end()
       }
     } else {
       const data = await getSession(jwt)
-      return {session: data}
+      return { session: data }
     }
   }
 
