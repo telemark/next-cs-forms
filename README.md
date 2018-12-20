@@ -6,6 +6,5 @@
 Forms for CS based on next
 
 ## License
-[MIT](LICENSE)
 
-![alt text](https://robots.kebabstudios.party/next-cs-forms.png "Robohash image of next-cs-forms")
+[MIT](LICENSE)
