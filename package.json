@@ -58,7 +58,7 @@
   "dependencies": {
     "axios": "0.18.0",
     "bluebird": "3.5.5",
-    "jws": "3.2.2",
+    "jws": "4.0.0",
     "muicss": "0.9.43",
     "next": "8.1.0",
     "react": "16.9.0",
