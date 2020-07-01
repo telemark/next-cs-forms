@@ -63,7 +63,7 @@
     "next": "8.1.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "simple-encryptor": "3.0.0"
+    "simple-encryptor": "4.0.0"
   },
   "standard": {
     "ignore": [
