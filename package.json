@@ -61,8 +61,8 @@
     "jws": "3.2.2",
     "muicss": "0.9.43",
     "next": "8.1.0",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "simple-encryptor": "3.0.0"
   },
   "standard": {
